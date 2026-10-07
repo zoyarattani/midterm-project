@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zoya's Book Nook</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>Zoya's Book Nook 📚</h1>
+
+        <p class="tagline">
+            Find your next favorite read!
+        </p>
+
+    </header>
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#books">Books</a>
+
+        <a href="#genres">Genres</a>
+
+        <a href="#recommend">Find a Book</a>
+
+        <a href="#about">About</a>
+
+    </nav>
+
+
+    <main>
+
+
+        <section id="home" class="hero">
+
+            <h2>Find Your Next Favorite Book</h2>
+
+            <p>
+                Explore some of my favorite books and discover
+                your next great read.
+            </p>
+
+            <button onclick="toggleCozyMode()">
+                ☕ Cozy Reading Mode
+            </button>
+
+        </section>
+
+
+        <section id="books">
+
+            <h2>My Book Recommendations</h2>
+
+
+            <div class="book-grid">
+
+
+                <article class="book-card">
+
+                    <img
+                        src="images/better-than-movies.png"
+                        alt="Better Than the Movies book cover"
+                    >
+
+                    <h3>Better Than the Movies</h3>
+
+                    <p>
+                        by Lynn Painter
+                    </p>
+
+                    <p class="genre">
+                        Romance
+                    </p>
+
+                    <p class="rating">
+                        ★★★★★
+                    </p>
+
+                </article>
+
+
+
+                <article class="book-card">
+
+                    <img
+                        src="images/flawless.jpeg"
+                        alt="Flawless book cover"
+                    >
+
+                    <h3>Flawless</h3>
+
+                    <p>
+                        by Elsie Silver
+                    </p>
+
+                    <p class="genre">
+                        Romance
+                    </p>
+
+                    <p class="rating">
+                        ★★★★★
+                    </p>
+
+                </article>
+
+
+
+                <article class="book-card">
+
+                    <img
+                        src="images/fourth-wing.jpeg"
+                        alt="Fourth Wing book cover"
+                    >
+
+                    <h3>Fourth Wing</h3>
+
+                    <p>
+                        by Rebecca Yarros
+                    </p>
+
+                    <p class="genre">
+                        Fantasy
+                    </p>
+
+                    <p class="rating">
+                        ★★★★★
+                    </p>
+
+                </article>
+
+
+
+                <article class="book-card">
+
+                    <img
+                        src="images/acotar.jpeg"
+                        alt="A Court of Thorns and Roses book cover"
+                    >
+
+                    <h3>A Court of Thorns and Roses</h3>
+
+                    <p>
+                        by Sarah J. Maas
+                    </p>
+
+                    <p class="genre">
+                        Fantasy
+                    </p>
+
+                    <p class="rating">
+                        ★★★★★
+                    </p>
+
+                </article>
+
+
+
+                <article class="book-card">
+
+                    <img
+                        src="images/verity.jpeg"
+                        alt="Verity book cover"
+                    >
+
+                    <h3>Verity</h3>
+
+                    <p>
+                        by Colleen Hoover
+                    </p>
+
+                    <p class="genre">
+                        Thriller
+                    </p>
+
+                    <p class="rating">
+                        ★★★★★
+                    </p>
+
+                </article>
+
+
+
+                <article class="book-card">
+
+                    <img
+                        src="images/guest-list.jpeg"
+                        alt="The Guest List book cover"
+                    >
+
+                    <h3>The Guest List</h3>
+
+                    <p>
+                        by Lucy Foley
+                    </p>
+
+                    <p class="genre">
+                        Thriller
+                    </p>
+
+                    <p class="rating">
+                        ★★★★
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <section id="genres">
+
+            <h2>Browse By Genre</h2>
+
+
+            <div class="genre-grid">
+
+
+                <div class="genre-box">
+
+                    <h3>❤️ Romance</h3>
+
+                    <p>
+                        Sweet, emotional, and dramatic love stories.
+                    </p>
+
+                </div>
+
+
+                <div class="genre-box">
+
+                    <h3>🐉 Fantasy</h3>
+
+                    <p>
+                        Magical worlds, dragons, adventure, and romance.
+                    </p>
+
+                </div>
+
+
+                <div class="genre-box">
+
+                    <h3>🔎 Thriller</h3>
+
+                    <p>
+                        Suspenseful stories full of secrets and twists.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <section id="recommend">
+
+            <h2>Find a Book</h2>
+
+            <p>
+                Choose a genre and I will recommend a book!
+            </p>
+
+
+            <select id="genreSelect">
+
+                <option value="">
+                    Choose a Genre
+                </option>
+
+                <option value="romance">
+                    Romance
+                </option>
+
+                <option value="fantasy">
+                    Fantasy
+                </option>
+
+                <option value="thriller">
+                    Thriller
+                </option>
+
+            </select>
+
+
+            <button onclick="recommendBook()">
+                Recommend a Book
+            </button>
+
+
+            <p id="bookResult">
+                Your recommendation will appear here.
+            </p>
+
+
+            <button onclick="randomBook()">
+                🎲 Surprise Me!
+            </button>
+
+        </section>
+
+
+        <section id="about">
+
+            <h2>About Zoya's Book Nook</h2>
+
+            <p>
+                Zoya's Book Nook is a place where I share
+                some of my favorite books from romance,
+                fantasy, and thriller genres.
+            </p>
+
+            <p>
+                Use the book finder above to discover
+                what you should read next!
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            📚 Zoya's Book Nook | Happy Reading!
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
