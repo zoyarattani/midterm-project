@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -6,14 +6,17 @@ html {
 
 body {
     margin: 0;
-    font-family: "Nunito Sans", Arial, sans-serif;
-    background-color: #faf6f0;
-    color: #2d2528;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    background-color: #fbf7f1;
+    color: #2e2729;
     line-height: 1.6;
 }
 
+
+/* Header */
+
 header {
-    background-color: #6a2938;
+    background-color: #572b3a;
     color: white;
     text-align: center;
     padding: 50px 20px 42px;
@@ -22,183 +25,264 @@ header {
 h1,
 h2,
 h3 {
-    font-family: "Bodoni Moda", Georgia, serif;
+    font-family: "Fraunces", Georgia, serif;
 }
 
 h1 {
     font-size: 3.8rem;
-    margin: 0;
     font-weight: 700;
-    letter-spacing: 1px;
+    margin: 0;
+    letter-spacing: 0.5px;
 }
 
 .tagline {
-    margin: 8px 0 0;
+    max-width: 650px;
+    margin: 9px auto 0;
     font-size: 1.05rem;
 }
+
+
+/* Navigation */
 
 nav {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    background-color: #382126;
+
+    background-color: #2f2026;
+
     text-align: center;
+
     padding: 14px 25px;
 }
 
 nav a {
     color: white;
+
     text-decoration: none;
+
     font-weight: 600;
-    padding: 4px;
+
+    padding: 5px;
 }
 
 nav a:hover {
-    color: #e6b9be;
+    color: #e0b6c1;
+
     text-decoration: underline;
 }
 
+
+/* Main layout */
+
 main {
-    max-width: 1000px;
+    max-width: 1050px;
+
     margin: auto;
+
     padding: 0 25px;
 }
 
 section {
-    padding: 50px 0;
-    border-bottom: 1px solid #c8b8b6;
+    padding: 55px 0;
+
+    border-bottom: 1px solid #c7b9b8;
 }
 
 h2 {
-    color: #6a2938;
-    font-size: 2.4rem;
+    color: #572b3a;
+
+    font-size: 2.5rem;
+
     line-height: 1.2;
+
     margin: 0 0 20px;
 }
 
 h3 {
-    color: #6a2938;
+    color: #572b3a;
 }
 
 .eyebrow {
-    color: #91616a;
+    color: #8b5c68;
+
     font-size: 0.75rem;
-    font-weight: 700;
+
+    font-weight: 600;
+
     letter-spacing: 2px;
-    margin-bottom: 7px;
+
+    margin: 0 0 8px;
 }
 
+
+/* Intro */
+
 .hero {
-    text-align: center;
-    max-width: 760px;
+    max-width: 790px;
+
     margin: auto;
-    padding-top: 65px;
-    padding-bottom: 65px;
+
+    padding-top: 70px;
+
+    padding-bottom: 70px;
 }
 
 .hero h2 {
-    font-size: 3rem;
+    font-size: 3.1rem;
 }
 
 .hero p:not(.eyebrow) {
-    font-size: 1.08rem;
     max-width: 680px;
-    margin: 0 auto 25px;
+
+    font-size: 1.08rem;
+
+    margin-bottom: 25px;
 }
 
 .section-intro {
     max-width: 700px;
+
     margin-bottom: 35px;
 }
 
+
+/* Books grid */
+
 .book-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     column-gap: 45px;
-    row-gap: 50px;
+
+    row-gap: 55px;
 }
 
 .book-entry {
-    border-top: 2px solid #6a2938;
+    border-top: 2px solid #572b3a;
+
     padding-top: 18px;
 }
 
 .book-entry img {
     display: block;
+
     width: 100%;
+
     max-width: 220px;
+
     height: 320px;
+
     object-fit: contain;
-    margin: 0 auto 18px;
+
+    margin: 0 auto 20px;
+
     border-radius: 0;
+}
+
+.genre-label {
+    color: #8b5c68;
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    margin: 0;
 }
 
 .book-entry h3 {
     font-size: 1.45rem;
-    margin: 3px 0 4px;
-}
 
-.genre-label {
-    color: #91616a;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin: 0;
+    line-height: 1.25;
+
+    margin: 4px 0;
 }
 
 .author {
-    margin: 0;
-    color: #65585b;
+    color: #675b5e;
+
+    margin: 0 0 12px;
+}
+
+.book-note {
+    margin: 0 0 12px;
 }
 
 .rating {
-    margin: 8px 0 0;
-    letter-spacing: 2px;
-    color: #6a2938;
+    color: #572b3a;
+
+    font-weight: 600;
+
+    margin: 0;
 }
+
+
+/* Genre grid */
 
 .genre-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 45px;
+
     margin-top: 35px;
 }
 
 .genre-section {
-    border-top: 2px solid #6a2938;
+    border-top: 2px solid #572b3a;
+
     padding-top: 14px;
+}
+
+.genre-number {
+    font-family: "Fraunces", Georgia, serif;
+
+    color: #a1838b;
+
+    font-size: 1.1rem;
+
+    margin: 0;
 }
 
 .genre-section h3 {
     font-size: 1.8rem;
+
     margin: 4px 0 10px;
 }
 
-.genre-number {
-    font-family: "Bodoni Moda", Georgia, serif;
-    color: #aa858a;
-    font-size: 1.1rem;
-    margin: 0;
-}
+
+/* Recommendation section */
 
 #recommend {
-    text-align: center;
     max-width: 780px;
+
     margin: auto;
 }
 
 #recommend label {
     display: block;
-    font-weight: 700;
+
+    font-weight: 600;
+
     margin: 25px 0 8px;
 }
 
 select {
-    font-family: "Nunito Sans", Arial, sans-serif;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+
     font-size: 1rem;
+
     background-color: #fffdf9;
-    color: #2d2528;
-    border: 1px solid #6a2938;
+
+    color: #2e2729;
+
+    border: 1px solid #572b3a;
+
     border-radius: 0;
+
     padding: 10px 14px;
 }
 
@@ -207,40 +291,64 @@ select {
 }
 
 button {
-    font-family: "Nunito Sans", Arial, sans-serif;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+
     font-size: 0.95rem;
+
     font-weight: 600;
-    background-color: #6a2938;
+
+    background-color: #572b3a;
+
     color: white;
-    border: 1px solid #6a2938;
+
+    border: 1px solid #572b3a;
+
     border-radius: 0;
+
     padding: 10px 16px;
-    margin: 8px 4px;
+
+    margin: 8px 5px 8px 0;
+
     cursor: pointer;
+
     box-shadow: none;
 }
 
 button:hover {
-    background-color: #87394c;
+    background-color: #743b4e;
 }
 
 #bookResult {
-    font-family: "Bodoni Moda", Georgia, serif;
-    font-size: 1.35rem;
-    color: #6a2938;
+    font-family: "Fraunces", Georgia, serif;
+
+    color: #572b3a;
+
+    font-size: 1.3rem;
+
     min-height: 35px;
+
     margin-top: 25px;
 }
 
+
+/* About */
+
 #about {
-    max-width: 750px;
+    max-width: 760px;
+
     margin: auto;
 }
 
+
+/* Footer */
+
 footer {
-    background-color: #382126;
+    background-color: #2f2026;
+
     color: white;
+
     text-align: center;
+
     padding: 28px 20px;
 }
 
@@ -249,65 +357,69 @@ footer p {
 }
 
 
-/* Cozy mode */
+/* Cozy reading mode */
 
 body.cozy-mode {
-    background-color: #20191b;
-    color: #eee5df;
+    background-color: #211b1e;
+
+    color: #eee5e2;
 }
 
 body.cozy-mode header {
-    background-color: #3d2027;
+    background-color: #3d222c;
 }
 
 body.cozy-mode nav {
-    background-color: #160f11;
+    background-color: #170f12;
 }
 
 body.cozy-mode h2,
 body.cozy-mode h3 {
-    color: #e5b8bf;
+    color: #e1b7c1;
 }
 
 body.cozy-mode .eyebrow,
 body.cozy-mode .genre-label {
-    color: #cf949e;
+    color: #ca939f;
 }
 
 body.cozy-mode section {
-    border-bottom-color: #60494f;
+    border-bottom-color: #625056;
 }
 
 body.cozy-mode .book-entry,
 body.cozy-mode .genre-section {
-    border-top-color: #b36f7b;
+    border-top-color: #b77686;
 }
 
 body.cozy-mode .author {
-    color: #cbbdb8;
+    color: #c9bbbe;
 }
 
 body.cozy-mode .rating {
-    color: #d99aa5;
+    color: #dba6b2;
 }
 
 body.cozy-mode select {
-    background-color: #302426;
-    color: #eee5df;
-    border-color: #b36f7b;
+    background-color: #302529;
+
+    color: #eee5e2;
+
+    border-color: #b77686;
 }
 
 body.cozy-mode #bookResult {
-    color: #e5b8bf;
+    color: #e1b7c1;
 }
 
 body.cozy-mode button {
-    background-color: #7c3b49;
-    border-color: #b36f7b;
+    background-color: #743b4e;
+
+    border-color: #a96173;
 }
 
 body.cozy-mode button:hover {
-    background-color: #965062;
+    background-color: #8b4b60;
 }
 
 
@@ -331,6 +443,7 @@ body.cozy-mode button:hover {
 
     nav {
         grid-template-columns: 1fr;
+
         gap: 8px;
     }
 
@@ -360,12 +473,15 @@ body.cozy-mode button:hover {
 
     .book-entry img {
         height: auto;
+
         max-width: 230px;
     }
 
     button {
         display: block;
+
         width: 100%;
+
         margin: 8px 0;
     }
 }
