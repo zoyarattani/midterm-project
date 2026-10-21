@@ -1,53 +1,40 @@
+const cozyButton = document.getElementById("cozy-button");
+const recommendButton = document.getElementById("recommend-button");
+const randomButton = document.getElementById("random-button");
 
+const genreSelect = document.getElementById("genreSelect");
+const result = document.getElementById("bookResult");
 
-function toggleCozyMode() {
-
+cozyButton.addEventListener("click", function () {
     document.body.classList.toggle("cozy-mode");
 
-}
+    if (document.body.classList.contains("cozy-mode")) {
+        cozyButton.textContent = "☀️ Regular Reading Mode";
+    } else {
+        cozyButton.textContent = "☕ Cozy Reading Mode";
+    }
+});
 
+recommendButton.addEventListener("click", function () {
+    const genre = genreSelect.value;
 
-function recommendBook() {
-
-    let genre = document.getElementById("genreSelect").value;
-
-    let result = document.getElementById("bookResult");
-
-
-    if (genre == "romance") {
-
-        result.innerHTML =
+    if (genre === "romance") {
+        result.textContent =
             "❤️ You should read Better Than the Movies by Lynn Painter!";
-
-    }
-
-    else if (genre == "fantasy") {
-
-        result.innerHTML =
+    } else if (genre === "fantasy") {
+        result.textContent =
             "🐉 You should read Fourth Wing by Rebecca Yarros!";
-
-    }
-
-    else if (genre == "thriller") {
-
-        result.innerHTML =
+    } else if (genre === "thriller") {
+        result.textContent =
             "🔎 You should read Verity by Colleen Hoover!";
-
+    } else {
+        result.textContent =
+            "Choose a genre first so I know what you are in the mood for!";
     }
+});
 
-    else {
-
-        result.innerHTML =
-            "Please choose a genre first!";
-
-    }
-
-}
-
-
-function randomBook() {
-
-    let books = [
+randomButton.addEventListener("click", function () {
+    const books = [
         "Better Than the Movies by Lynn Painter",
         "Flawless by Elsie Silver",
         "Fourth Wing by Rebecca Yarros",
@@ -56,14 +43,8 @@ function randomBook() {
         "The Guest List by Lucy Foley"
     ];
 
+    const randomNumber = Math.floor(Math.random() * books.length);
 
-    let randomNumber =
-        Math.floor(Math.random() * books.length);
-
-
-    document.getElementById("bookResult").innerHTML =
-        "📖 You should read " +
-        books[randomNumber] +
-        "!";
-
-}
+    result.textContent =
+        "📖 You should read " + books[randomNumber] + "!";
+});
