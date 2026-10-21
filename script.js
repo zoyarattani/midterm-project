@@ -5,35 +5,51 @@ const randomButton = document.getElementById("random-button");
 const genreSelect = document.getElementById("genreSelect");
 const result = document.getElementById("bookResult");
 
+
 cozyButton.addEventListener("click", function () {
+
     document.body.classList.toggle("cozy-mode");
 
     if (document.body.classList.contains("cozy-mode")) {
-        cozyButton.textContent = "☀️ Regular Reading Mode";
+        cozyButton.textContent = "Back to Daylight";
     } else {
-        cozyButton.textContent = "☕ Cozy Reading Mode";
+        cozyButton.textContent = "Switch to Cozy Mode";
     }
+
 });
 
+
 recommendButton.addEventListener("click", function () {
+
     const genre = genreSelect.value;
 
     if (genre === "romance") {
+
         result.textContent =
-            "❤️ You should read Better Than the Movies by Lynn Painter!";
+            "Start with Better Than the Movies by Lynn Painter. This one is such a fun romance.";
+
     } else if (genre === "fantasy") {
+
         result.textContent =
-            "🐉 You should read Fourth Wing by Rebecca Yarros!";
+            "Go with Fourth Wing by Rebecca Yarros. Dragons, chaos, romance — this is the one.";
+
     } else if (genre === "thriller") {
+
         result.textContent =
-            "🔎 You should read Verity by Colleen Hoover!";
+            "Read Verity by Colleen Hoover. You will have opinions when you finish it.";
+
     } else {
+
         result.textContent =
-            "Choose a genre first so I know what you are in the mood for!";
+            "Pick a genre first and I'll choose one for you.";
+
     }
+
 });
 
+
 randomButton.addEventListener("click", function () {
+
     const books = [
         "Better Than the Movies by Lynn Painter",
         "Flawless by Elsie Silver",
@@ -46,5 +62,6 @@ randomButton.addEventListener("click", function () {
     const randomNumber = Math.floor(Math.random() * books.length);
 
     result.textContent =
-        "📖 You should read " + books[randomNumber] + "!";
+        "My pick for you: " + books[randomNumber] + ".";
+
 });
