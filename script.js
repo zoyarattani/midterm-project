@@ -27,7 +27,6 @@ recommendButton.addEventListener("click", function () {
 
     const genre = genreSelect.value;
 
-
     if (genre === "romance") {
 
         result.textContent =
@@ -64,10 +63,8 @@ randomButton.addEventListener("click", function () {
         "The Guest List by Lucy Foley"
     ];
 
-
     const randomNumber =
         Math.floor(Math.random() * books.length);
-
 
     result.textContent =
         "Okay, I'm choosing for you: " + books[randomNumber] + ".";
