@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Quiz</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/uikit@3.24.2/dist/css/uikit.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.24.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.24.2/dist/js/uikit-icons.min.js"></script>
+
+    <script src="js/quiz.js" defer></script>
+</head>
+
+<body>
+
+    <main class="uk-container uk-container-small uk-margin-large-top">
+
+        <div class="uk-card uk-card-default uk-card-body">
+
+            <h1>Book Trivia Quiz</h1>
+
+            <p>Choose the correct author for each book.</p>
+
+            <div id="question" class="uk-text-lead uk-margin"></div>
+
+            <form id="optionsForm">
+
+                <label class="uk-display-block uk-margin-small">
+                    <input class="uk-radio" type="radio" name="option" value="Suzanne Collins">
+                    Suzanne Collins
+                </label>
+
+                <label class="uk-display-block uk-margin-small">
+                    <input class="uk-radio" type="radio" name="option" value="J.K. Rowling">
+                    J.K. Rowling
+                </label>
+
+                <label class="uk-display-block uk-margin-small">
+                    <input class="uk-radio" type="radio" name="option" value="Rebecca Yarros">
+                    Rebecca Yarros
+                </label>
+
+                <label class="uk-display-block uk-margin-small">
+                    <input class="uk-radio" type="radio" name="option" value="Emily Henry">
+                    Emily Henry
+                </label>
+
+                <label class="uk-display-block uk-margin-small">
+                    <input class="uk-radio" type="radio" name="option" value="Colleen Hoover">
+                    Colleen Hoover
+                </label>
+
+            </form>
+
+            <button id="submit" class="uk-button uk-button-primary uk-margin-top">
+                Submit
+            </button>
+
+            <div id="result" class="uk-margin-top uk-text-bold"></div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
